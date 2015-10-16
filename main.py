@@ -14,6 +14,6 @@ print(namedom)
 
 
 
-renqidom = bodysoup.find('span', class_='f20 cf90')
+renqidom = bodysoup.find(attrs={'class': 'f20 cf90'}).string
 print('-----------------------------------------------------------')
 print(renqidom)
