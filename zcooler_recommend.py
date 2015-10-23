@@ -8,19 +8,20 @@ import json
 def main_user(user_id, p):
     url = 'http://www.zcool.com.cn/u/' + str(user_id) + '/zcooler_recommend.xhtml?p=' + str(p)
     r = requests.get(url)
-    bodydom = r.content
+    bodysoup = BeautifulSoup(r.content, 'html.parser')
 
-    bodysoup = BeautifulSoup(bodydom, 'html.parser')
+    if(bodysoup.find_all(attrs={'class': 'camLiCon'}).__len__() > 0):
+        for w in bodysoup.find_all(attrs={'class': 'camLiCon'}):
+            print w.previous_sibling.previous_sibling['href']
 
-    user_detail_dict = {}
+        page_this = bodysoup.find(attrs= {'class': 'selected', 'btnmode': 'true'}).text.strip()
+        print 'user_id: ' + str(user_id) + ' page_this: ' + str(page_this)
+        page_total = bodysoup.find(attrs= {'class': 'pageNext', 'btnmode': 'true'}).previous_sibling.previous_sibling.text.strip()
+        print 'user_id: ' + str(user_id) + ' page_total: ' + str(page_total)
+        page_next = int(page_this) + 1
+        if not page_next > int(page_total):
+            main_user(user_id, page_next)
 
 
-    page_this = bodysoup.find(attrs= {'class': 'selected', 'btnmode': 'true'}).text.strip()
-    print page_this
-    page_total = bodysoup.find(attrs= {'class': 'pageNext', 'btnmode': 'true'}).previous_sibling.previous_sibling.text.strip()
-    print page_total
-    page_next = int(page_this) + 1
-    if not page_next > int(page_total):
-        main_user(user_id, page_next)
-
-main_user(1, 1)
+for i in xrange(1, 1000):
+    main_user(i, 1)
