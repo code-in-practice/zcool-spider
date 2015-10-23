@@ -20,7 +20,7 @@ def main_user(user_id, p):
     page_total = bodysoup.find(attrs= {'class': 'pageNext', 'btnmode': 'true'}).previous_sibling.previous_sibling.text.strip()
     print page_total
     page_next = int(page_this) + 1
-    if not page_next > page_total:
+    if not page_next > int(page_total):
         main_user(user_id, page_next)
 
 main_user(1, 1)

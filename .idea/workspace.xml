@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3e6f020-9c10-49a5-af88-9685d9bc2652" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/display.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/elastic.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zcooler_recommend.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/mongo.py" afterPath="$PROJECT_DIR$/db/mongo.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/zcool-spider.iml" afterPath="$PROJECT_DIR$/.idea/zcool-spider.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zcooler_recommend.py" afterPath="$PROJECT_DIR$/zcooler_recommend.py" />
     </list>
     <ignored path="zcool-spider.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/zcooler_recommend.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5670103">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
               <folding>
                 <element signature="e#15#30#0" expanded="true" />
               </folding>
@@ -668,7 +661,7 @@
     <entry file="file://$PROJECT_DIR$/zcooler_recommend.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5670103">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
           <folding>
             <element signature="e#15#30#0" expanded="true" />
           </folding>
