@@ -14,13 +14,13 @@ def main_user(user_id, p):
         for w in bodysoup.find_all(attrs={'class': 'camLiCon'}):
             print w.previous_sibling.previous_sibling['href']
 
-        page_this = bodysoup.find(attrs= {'class': 'selected', 'btnmode': 'true'}).text.strip()
-        print 'user_id: ' + str(user_id) + ' page_this: ' + str(page_this)
-        page_total = bodysoup.find(attrs= {'class': 'pageNext', 'btnmode': 'true'}).previous_sibling.previous_sibling.text.strip()
-        print 'user_id: ' + str(user_id) + ' page_total: ' + str(page_total)
-        page_next = int(page_this) + 1
-        if not page_next > int(page_total):
-            main_user(user_id, page_next)
+    page_this = bodysoup.find(attrs= {'class': 'selected', 'btnmode': 'true'}).text.strip()
+    print 'user_id: ' + str(user_id) + ' page_this: ' + str(page_this)
+    page_total = bodysoup.find(attrs= {'class': 'pageNext', 'btnmode': 'true'}).previous_sibling.previous_sibling.text.strip()
+    print 'user_id: ' + str(user_id) + ' page_total: ' + str(page_total)
+    page_next = int(page_this) + 1
+    if not page_next > int(page_total):
+        main_user(user_id, page_next)
 
 
 for i in xrange(1, 1000):
