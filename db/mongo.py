@@ -8,7 +8,7 @@ db_port = 27017
 client = MongoClient(db_url, db_port)
 
 db = client['zcool']
-collection = db['c']
+collection = db['user']
 
 user = {"author": "Mike"}
 print(user)
